@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, url_for, redirect
 import pandas as pd
 import sqlite3
 
-path = "/Users/wenqian/Desktop/DB/proj"  # Insert path here
+path = ""  # Insert path here
 database = path + '/database.sqlite'
 
 conn = sqlite3.connect(database)
