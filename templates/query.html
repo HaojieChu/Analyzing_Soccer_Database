@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= "/static/soccer.css">
+    <title>Club Soccer System</title>
+</head>
+<body style="text-align:center">
+  <center class="container" >
+    <h1>Club Soccer System</h1>
+
+    <form action="/query" method="post">
+
+      {% if info == 'Player_new' %}
+        Please input the "player name" to check the player information: <input type="text" name="player_name",value="player_name">
+        <input type="submit" name="submit" value="check player">
+      {% elif info == 'Team' %}
+        Please input the "team name" to check the team information: <input type="text" name="team_long_name",value="team_long_name">
+        <input type="submit" name="submit" value="check team">
+      {% elif info == 'Match_new' %}
+        <p>Please input the "season", "home team name" and "away team name" to check the match information: </p>
+        season: <input type="text" name="season",value="season"><br><br>
+        home team name: <input type="text" name="home_team_name",value="home_team_name"><br><br>
+        away team name: <input type="text" name="away_team_name",value="away_team_name"><br><br>
+        <input type="submit" name="submit" value="check match">
+      {% elif info == 'Stadium' %}
+        Please input the "home team name" to check the Stadium information: <input type="text" name="HomeTeams",value="HomeTeams">
+        <input type="submit" name="submit" value="check stadium">
+      {% elif info == 'Injury' %}
+        Please input the "player name" to check the Injury information: <input type="text" name="name",value="name">
+        <input type="submit" name="submit" value="check injury">
+      {% endif %}
+    </form>
+
+    <br/>
+
+    <center>{{data|safe}}</center>
+  </center>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= "/static/soccer.css">
+    <title>Club Soccer Management System</title>
+</head>
+<body style="text-align:center">
+  <center class="container" >
+    <h1>Club Soccer Management System</h1>
+
+    <form action="/modification" method="post">
+      {% if type == 'insert' %}
+        <h3>Insert a match record</h3>
+        Input the match id: <input type="text" name="match_api_id",value="match_api_id"><br><br>
+        Input the country name: <input type="text" name="countryname",value="countryname"><br><br>
+        Input the league name: <input type="text" name="leaguename",value="leaguename"><br><br>
+        Input the home team name: <input type="text" name="home_team_name",value="home_team_name"><br><br>
+        Input the home team short name: <input type="text" name="home_team_short_name",value="home_team_short_name"><br><br>
+        Input the away team name: <input type="text" name="away_team_name",value="away_team_name"><br><br>
+        Input the away team short name: <input type="text" name="away_team_short_name",value="away_team_short_name"><br><br>
+        Input the season: <input type="text" name="season",value="season"><br><br>
+        Input the date: <input type="text" name="Date",value="Date"><br><br>
+        Input the stage: <input type="text" name="stage",value="stage"><br><br>
+        Input the home team goal: <input type="text" name="home_team_goal",value="home_team_goal"><br><br>
+        Input the away team goal: <input type="text" name="away_team_goal",value="away_team_goal"><br><br>
+        Input Match Winner: <input type="text" name="Match_Winner",value="Match_Winner"><br><br>
+        <input type="submit" name="submit" value="Insert">
+      {% elif type == 'update'%}
+        <h3>Update a match record</h3>
+        Input the match id: <input type="text" name="match_api_id",value="match_api_id"><br><br>
+        Input the country name: <input type="text" name="countryname",value="countryname"><br><br>
+        Input the league name: <input type="text" name="leaguename",value="leaguename"><br><br>
+        Input the home team name: <input type="text" name="home_team_name",value="home_team_name"><br><br>
+        Input the home team short name: <input type="text" name="home_team_short_name",value="home_team_short_name"><br><br>
+        Input the away team name: <input type="text" name="away_team_name",value="away_team_name"><br><br>
+        Input the away team short name: <input type="text" name="away_team_short_name",value="away_team_short_name"><br><br>
+        Input the season: <input type="text" name="season",value="season"><br><br>
+        Input the date: <input type="text" name="Date",value="Date"><br><br>
+        Input the stage: <input type="text" name="stage",value="stage"><br><br>
+        Input the home team goal: <input type="text" name="home_team_goal",value="home_team_goal"><br><br>
+        Input the away team goal: <input type="text" name="away_team_goal",value="away_team_goal"><br><br>
+        Input Match Winner: <input type="text" name="Match_Winner",value="Match_Winner"><br><br>
+        <input type="submit" name="submit" value="Update">
+      {% else %}
+        <h3>Delete a match record</h3>
+        Input the match id: <input type="text" name="match_api_id",value="match_api_id"><br><br>
+        Input the country name: <input type="text" name="countryname",value="countryname"><br><br>
+        Input the league name: <input type="text" name="leaguename",value="leaguename"><br><br>
+        Input the home team name: <input type="text" name="home_team_name",value="home_team_name"><br><br>
+        Input the home team short name: <input type="text" name="home_team_short_name",value="home_team_short_name"><br><br>
+        Input the away team name: <input type="text" name="away_team_name",value="away_team_name"><br><br>
+        Input the away team short name: <input type="text" name="away_team_short_name",value="away_team_short_name"><br><br>
+        Input the season: <input type="text" name="season",value="season"><br><br>
+        Input the date: <input type="text" name="Date",value="Date"><br><br>
+        Input the stage: <input type="text" name="stage",value="stage"><br><br>
+        Input the home team goal: <input type="text" name="home_team_goal",value="home_team_goal"><br><br>
+        Input the away team goal: <input type="text" name="away_team_goal",value="away_team_goal"><br><br>
+        Input Match Winner: <input type="text" name="Match_Winner",value="Match_Winner"><br><br>
+        <input type="submit" name="submit" value="Delete">
+      {% endif %}
+    </form>
+
+    <center>
+      {% if msg %}
+        <h3>{{msg}}</h3>
+      {% endif %}
+    </center>
+  </center>
+</body>
+</html>

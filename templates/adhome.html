@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= "/static/soccer.css">
+    <title>Club Soccer Management System</title>
+</head>
+<body>
+  <center class="container" >
+    <h1>Club Soccer Management System</h1>
+
+    <form action="/adhome" method="post">
+
+      <h3> Hello Admin </h3>
+      <h3> Please choose the following modification type you want to make to the Database. </h3>
+      <input type="radio" name="modification" value="insert"> Insert a match record.<br>
+      <input type="radio" name="modification" value="update"> Update a match record.<br>
+      <input type="radio" name="modification" value="delete"> Delete a match record.<br><br>
+      <input type="submit" name="submit" value="SUBMIT">
+      <br><br><br>
+      <input type="submit" name='backToLogin' value="Back to Login Page">
+    </form>
+  </center>
+</body>
+</html>

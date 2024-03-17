@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= "/static/soccer.css">
+    <title>Club Soccer Predictions</title>
+</head>
+<body>
+  <center class="container" >
+    <h1>Club Soccer Predictions</h1>
+
+    <form action="/pk" method="post">
+
+      {% if info == 'Player_Ability' %}
+        Please input two "player names" to check the player information and make prediction: <br>
+        <br>
+        Player name1: <input type="text" name="player_name1",value="player_name1"> 
+        Player name2: <input type="text" name="player_name2",value="player_name1">
+        <input type="submit" name="submit" value="Player PK">
+      {% elif info == 'Team_Ability' %}
+        Please input two "team names" to check the team information and make prediction: <br>
+        <br>
+        Team name1: <input type="text" name="team_long_name1",value="team_long_name1">   
+        Team name2: <input type="text" name="team_long_name2",value="team_long_name2">
+        <input type="submit" name="submit" value="Team PK">
+      {% endif %}
+    </form>
+
+    <br/>
+
+    <center>
+      {{data1|safe}}
+      <br>
+      {{data2|safe}}
+      <br>
+      {% if error %}
+        <h3>{{error}}</h3>
+      {% endif %}
+      {% if msg %}
+        <h3>{{msg}}</h3>
+      {% endif %}
+    </center>
+  </center>
+</body>
+</html>
