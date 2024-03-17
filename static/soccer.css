@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  background-image: url(/static/bg-image.jpeg);
+  text-align: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 1; 
+  background-color: azure; 
+  border-radius: 8px;
+  width: fit-content;
+  min-width: 1000px;
+  margin: 5px;
+  padding-bottom: 20px;
+}
